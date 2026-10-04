@@ -138,7 +138,6 @@ input[type=range]{width:100%;accent-color:var(--m)}.sl-row{display:grid;grid-tem
 <div id="lb"><button class="lbx" onclick="closeZ()" aria-label="Close">×</button><div id="lbBody"></div><div class="lbc"><button onclick="lbZ(-.25)">−</button><button onclick="lbZ(0)">↺</button><button onclick="lbZ(.25)">+</button></div></div>
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-if(matchMedia('(prefers-color-scheme:dark)').matches)document.body.classList.add('dark-mode');
 (function(){const m=['Preparing presentation…','Mapping the ecosystem…','Connecting skills to opportunity…','Almost ready…'],t0=performance.now(),D=2600;(function t(n){const p=Math.min(100,(n-t0)/D*100);$('#lF').style.width=p+'%';$('#lP').textContent=Math.round(p)+'%';$('#lS').textContent=m[Math.min(3,p/25|0)];if(p<100)requestAnimationFrame(t);else setTimeout(()=>{$('#ld').classList.add('hide');reveal($('#slide-0'))},250)})(t0)})();
 $$('.chain').forEach(c=>{if(c.dataset.c)c.innerHTML=c.dataset.c.split('|').map((t,i,a)=>`<span class="chip rv">${t}</span>`+(i<a.length-1?'<b class="arr rv">→</b>':'')).join('')});
 $$('.tags').forEach(c=>c.innerHTML=c.dataset.t.split('|').map(t=>`<span class="tag">${t}</span>`).join(''));
